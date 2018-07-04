@@ -26,7 +26,7 @@ namespace Src.MusicScene
                             var time = split[0];
                             var channel = split[1];
 
-                            CreateNote(Convert.ToDecimal(time) * 30, Convert.ToInt32(channel));
+                            CreateNote(Convert.ToDecimal(time) * musicDataState.NoteSpeed, Convert.ToInt32(channel));
                         }
                         catch (Exception)
                         {

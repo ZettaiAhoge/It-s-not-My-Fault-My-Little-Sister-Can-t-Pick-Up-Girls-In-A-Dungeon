@@ -13,7 +13,7 @@ namespace Src.MusicScene
             {
                 if (globals.GetComponentInChildren<MusicDataState>() == null)
                 {
-                    MusicDataState.AddToGameObject(globals, "shokuzainoserenade");
+                    MusicDataState.AddToGameObject(globals, "cartoon_heroes");
                 }
             }
         }

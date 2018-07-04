@@ -4,17 +4,19 @@ namespace Src.MusicScene
 {
     public class TemporaryNoteCanvas : MonoBehaviour
     {
-        private float _startTime;
+        public GameObject MusicPlayerObject;
+
+        private int _noteSpeed;
 
         public void Start()
         {
-            _startTime = Time.time;
+            _noteSpeed = GameObject.Find("Globals").GetComponentInChildren<MusicDataState>().NoteSpeed;
         }
 
         public void Update()
         {
             transform.SetPositionAndRotation(
-                Vector3.down * (Time.time - _startTime) * 30,
+                Vector3.down * MusicPlayerObject.GetComponent<MusicPlayer>().GetAudioSource().time * _noteSpeed,
                 Quaternion.identity);
         }
     }
